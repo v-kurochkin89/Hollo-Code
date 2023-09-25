@@ -1,2 +1,42 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Решение для задачи по выводу второй цифры в трёхзначном числе:
+
+Console.Write("Введите трёхзначное число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int N23 = N % 100;
+int N2 = N23 / 10;
+Console.WriteLine($"Вторая цифра в этом числе: {N2}");
+
+// _______________________________________________________________________________________________________________
+
+// Решение для задачи по выводу третьей цифры либо фолс:
+
+Console.Write("Введите положительное число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n < 100)
+    Console.WriteLine("Третьей цифры нет");
+else
+    {
+        while (n > 999)
+        n = n / 10;
+    }
+    {
+       int n3 = n % 10;
+       Console.WriteLine($"Третья цифра равна: {n3}");
+    };
+
+// _______________________________________________________________________________________________________________
+
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.Write("Введите номер дня недели: ");
+int DayNumber = Convert.ToInt32(Console.ReadLine());
+
+if (DayNumber > 0 && DayNumber <= 5)
+    Console.WriteLine("Это будний день");
+else if (DayNumber == 6 || DayNumber == 7)
+        Console.WriteLine("Это выходной");
+        else Console.WriteLine("Это не номер дня недели, попробуйте снова");
