@@ -67,16 +67,16 @@
 // 34, 5 -> не кратно, остаток 4 
 // 16, 4 -> кратно
 
-Console.Write("Введите первое число: ");
-int n1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите первое число: ");
+// int n1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите второе число: ");
-int n2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе число: ");
+// int n2 = Convert.ToInt32(Console.ReadLine());
 
-if (n1 % n2 == 0)
-    Console.WriteLine("кратно");
-else
-    Console.WriteLine("не кратно, остаток " + n1 % n2);
+// if (n1 % n2 == 0)
+//     Console.WriteLine("кратно");
+// else
+//     Console.WriteLine("не кратно, остаток " + n1 % n2);
 
 // Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
 

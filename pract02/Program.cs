@@ -1,13 +1,6 @@
-﻿int a = 5;
-int b = 10;
-int c = 7;
-int max = a;
-
-if (max < b)
-    max = b;
-
-if (max < c)
-    max = c;
-
-// Console.Write("Максимальное число из представленных: ");
-Console.WriteLine(max);
+﻿int number = 6;
+int index = 2;
+while (index <= number) {
+    Console.Write($"{index} ");
+    index = index + 2;
+}
