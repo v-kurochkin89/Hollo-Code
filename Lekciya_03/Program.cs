@@ -67,14 +67,59 @@
 
 // Метод 4 через цикл for (цикл со счетчиков, когда известно число шагов)
 
-string Method04(int count, string text)
+// string Method04(int count, string text)
+// {
+//     string result = String.Empty;
+//     for (int i = 0; i < count; i++)
+//     {
+//         result = result + text;
+//     }
+//     return result;
+// }
+// string final = Method04(10, "12345 ");
+// Console.WriteLine(final);
+
+// for (int i = 1; i < 11; i++)
+// {
+//     for (int j = 1; j < 11; j++)
+//     {
+//         Console.WriteLine($"{i} x {j} = {i*j}");
+//     }
+//     Console.WriteLine();
+// }
+
+// ______________________________________________________________________
+
+// Замена символов в тексте
+
+string text = "– Я думаю, – сказал князь, улыбаясь, – что,"
+            + "ежели бы вас послали вместо нашего милого Винценгероде,"
+            + "вы бы взяли приступом согласие прусского короля."
+            + "Вы так красноречивы. Вы дадите мне чаю?";
+
+string Replace(string text, char OldValue, char NewValue)
 {
-    string result = String.Empty;
-    for (int i = 0; i < count; i++)
-    {
-        result = result + text;
-    }
+    string result = string.Empty;
+    int length = text.Length;
+    int i = 0;
+    while (i < length)
+        {
+            if (text[i] == OldValue) result = result + NewValue;
+            else result = result + text[i];
+            i++;
+        }
     return result;
 }
-string final = Method04(10, "12345 ");
-Console.WriteLine(final);
+
+string NewText = Replace(text, ' ', '_');
+Console.WriteLine(NewText);
+
+Console.WriteLine();
+
+string NewText02 = Replace(NewText, 'о', 'О');
+Console.WriteLine(NewText02);
+
+Console.WriteLine();
+
+string NewText03 = Replace(NewText02, 'к', 'К');
+Console.WriteLine(NewText03);
